@@ -9,6 +9,8 @@ CSS3を使わずに要素の拡大縮小アニメーションを補助するjque
 $("要素").scaleAnm({scale:0.1.....});<br>
 のような感じです。<br>
 拡大縮小したい要素を指定して使うだけです。<br>
+(例)<br>
+$(".testBox").scaleAnm({scale:0.1,duration:500,ease:"easeOutElastic"});<br>
 
 ▼引数の種類と役割<br>
 
