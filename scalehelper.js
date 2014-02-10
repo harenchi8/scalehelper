@@ -6,7 +6,7 @@
 				point:"CC",
 				duration:1000,
 				delay:0,
-				ease:"linear",
+				ease:null,
 				callback:function(){}
 			};
 		var setting = $.extend(defaults, options);
