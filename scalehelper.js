@@ -1,5 +1,5 @@
 (function($) {
-    $.fn.scaleAnm = function(options)
+    $.fn.scalehelper = function(options)
     {
 		var defaults = {
 				scale:1,
