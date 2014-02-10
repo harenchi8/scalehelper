@@ -1,5 +1,5 @@
 (function($) {
-    $.fn.scalehelper = function(options)
+    $.fn.scaleAnm = function(options)
     {
 		var defaults = {
 				scale:1,
@@ -23,11 +23,16 @@
 		var targetHeight = this.height();
 		var _w = targetWidth * _scale;
 		var _h = targetHeight * _scale;
+
 		_scale = _scale * 100;
 
 		var points = getPoint([targetWidth, targetHeight, _w, _h], _point);
-		var posY = parseInt(this.css("top").split("px")[0], 10) + points[0];
-		var posX = parseInt(this.css("left").split("px")[0], 10) + points[1];
+		var py = parseInt(this.css("top").split("px")[0], 10);
+		py = (py)?py:0;
+		var px = parseInt(this.css("left").split("px")[0], 10)
+		px = (px)?px:0;
+		var posY = py + points[0];
+		var posX = px + points[1];
 
 		this.delay(_delay).animate({width:_w + "px", height:_h + "px", top:posY + "px", left:posX + "px" }, _duration, _easeing, _callback);
 		
